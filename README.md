@@ -22,6 +22,9 @@ A calculator app that is featuring different calculators on Android phone.
 
 **Required Must-have Stories**
 
+* User switchs between select and switch between multiple calculator types
+* User inputs data and receives computated answers
+* 
 * User logs in to access previous chats and preference settings
 * User picks what their favorite artist/genre/etc. (Think Spotify interface)
 * Matches have a chat window to get to know each other, with the ability to skip music and unmatch (Tinder Style).

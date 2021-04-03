@@ -31,7 +31,7 @@ A calculator app that is featuring different calculators on Android phone.
 * Computation history is saved even after the app is closed.
 * Computation history can be cleared by the user.
 * Results can be shared to other apps.
-* User can click a button to save results to clipboard .
+* User can click a button to save results to clipboard.
 
 ### 2. Screen Archetypes
 

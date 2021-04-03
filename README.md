@@ -26,6 +26,10 @@ A calculator app that is featuring different calculators on Android phone.
 * Calculator has different screens and ability to perform their own tasks.
 * User switchs between multiple calculator types
 
+**Optional Nice-to-have Stories**
+
+* Computation history is saved even after the app is closed.
+* Computation history can be cleared by the user.
 
 ### 2. Screen Archetypes
 

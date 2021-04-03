@@ -22,14 +22,16 @@ A calculator app that is featuring different calculators on Android phone.
 
 **Required Must-have Stories**
 
-* User inputs data and receives computated answers
+* User inputs data and receives computated answers.
 * Calculator has different screens and ability to perform their own tasks.
-* User switchs between multiple calculator types
+* User switchs between multiple calculator types.
 
 **Optional Nice-to-have Stories**
 
 * Computation history is saved even after the app is closed.
 * Computation history can be cleared by the user.
+* Results can be shared to other apps.
+* User can click a button to save results to clipboard .
 
 ### 2. Screen Archetypes
 

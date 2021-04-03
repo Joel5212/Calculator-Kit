@@ -1,10 +1,3 @@
-Unit 8: Group Milestone - README Example
-===
-
-:::info
-**Below is an example** of what your **Group Project README** should include and how it should be structured for the **Unit 8 Group Milestone Submission**.
-:::
-
 # Calculator Kit
 
 ## Table of Contents
@@ -71,4 +64,4 @@ A calculator app that is featuring different calculators on Android phone.
 
 
 ## Wireframes
-<img src="https://github.com/CodePath-Calculator/Calculator/blob/main/wireframe.jpg" width=800><br>
+<img src="wireframe.jpg" width=1350><br>

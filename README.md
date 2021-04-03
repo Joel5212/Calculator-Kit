@@ -12,7 +12,7 @@ A calculator app that is featuring different calculators on Android phone.
 ### App Evaluation
 - **Category:** Utilities / Tool
 - **Mobile:** This app would be primarily developed for mobile but would perhaps be just as viable on a computer. Functionality wouldn't be limited to mobile devices, however mobile version could potentially have more features.
-- **Story:** Gets users input, and display an answer on the screen.
+- **Story:** User will press start and then be naviagted to the options of calculators.
 - **Market:** Any individual could choose to use this app.
 - **Habit:** This app could be used as often or unoften as the user wanted depending on how deep their social life is, and what exactly they're looking for.
 - **Scope:** First we would start with pairing people based on music taste, then perhaps this could evolve into a music sharing application as well to broaden its usage. Large potential for use with spotify, apple music, or other music streaming applications.

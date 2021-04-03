@@ -64,4 +64,4 @@ A calculator app that is featuring different calculators on Android phone.
 
 
 ## Wireframes
-<img src="wireframe.jpg" width=800><br>
+<img src="wireframe.jpg" width=1350><br>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Calculator Kit</string>
+    <string name="simple_calculator">Simple Calculator</string>
+    <string name="geometry_calculator">Geometry Calculator</string>
+    <string name="matrix_calculator">Matrix Calculator</string>
+    <string name="conversion_calculator">Conversion Calculator</string>
+    <string name="area_surface_area_and_volume">Area, Surface Area, and Volume</string>
+    <string name="intersections">Intersections</string>
+    <string name="distance">Distance</string>
+    <string name="angles">Angles</string>
+</resources>

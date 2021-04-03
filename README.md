@@ -22,7 +22,7 @@ A calculator app that is featuring different calculators on Android phone.
 
 **Required Must-have Stories**
 
-* User switchs between select and switch between multiple calculator types
+* User switchs between multiple calculator types
 * User inputs data and receives computated answers
 * 
 * User logs in to access previous chats and preference settings

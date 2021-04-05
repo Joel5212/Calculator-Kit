@@ -24,6 +24,10 @@
         <activity android:name=".IntersectionsActivity"></activity>
         <activity android:name=".DistanceActivity"></activity>
         <activity android:name=".AnglesActivity"></activity>
+        <activity android:name=".AnglesTriangleActivity"></activity>
+        <activity android:name=".AnglesQuadrilateralActivity"></activity>
+        <activity android:name=".AnglesPentagonActivity"></activity>
+        <activity android:name=".AnglesHexagonActivity"></activity>
     </application>
 
 </manifest>

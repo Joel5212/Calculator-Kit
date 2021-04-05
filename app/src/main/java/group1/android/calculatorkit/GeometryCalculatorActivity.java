@@ -24,36 +24,24 @@ public class GeometryCalculatorActivity extends AppCompatActivity {
         btnDistance = findViewById(R.id.btnDistance);
         btnAngles = findViewById(R.id.btnAngles);
 
-        btnAreaSurfaceAreaAndVolume.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(GeometryCalculatorActivity.this, AreaSurfaceAreaAndVolumeActivity.class);
-                startActivity(i);
-            }
+        btnAreaSurfaceAreaAndVolume.setOnClickListener(v -> {
+            Intent i = new Intent(GeometryCalculatorActivity.this, AreaSurfaceAreaAndVolumeActivity.class);
+            startActivity(i);
         });
 
-        btnIntersections.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(GeometryCalculatorActivity.this, IntersectionsActivity.class);
-                startActivity(i);
-            }
+        btnIntersections.setOnClickListener(v -> {
+            Intent i = new Intent(GeometryCalculatorActivity.this, IntersectionsActivity.class);
+            startActivity(i);
         });
 
-        btnDistance.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(GeometryCalculatorActivity.this, DistanceActivity.class);
-                startActivity(i);
-            }
+        btnDistance.setOnClickListener(v -> {
+            Intent i = new Intent(GeometryCalculatorActivity.this, DistanceActivity.class);
+            startActivity(i);
         });
 
-        btnAngles.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(GeometryCalculatorActivity.this, AnglesActivity.class);
-                startActivity(i);
-            }
+        btnAngles.setOnClickListener(v -> {
+            Intent i = new Intent(GeometryCalculatorActivity.this, AnglesActivity.class);
+            startActivity(i);
         });
     }
 }

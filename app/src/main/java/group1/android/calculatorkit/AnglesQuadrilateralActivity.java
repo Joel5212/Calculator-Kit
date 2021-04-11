@@ -82,9 +82,9 @@ public class AnglesQuadrilateralActivity extends AppCompatActivity {
                 // Find the missing angle(s) by subtracting by the sum by 360.
                 int angle4OrMissingAngles = 360 - sumOfAngles;
 
-                // If one of the empty strings were converted to 0,
+                // If there were any angles without inputs
                 // Then there are more than one missing angle to find.
-                if (intAngle1 == 0 || intAngle2 == 0 || intAngle3 == 0) {
+                if (angle1.matches("") || angle2.matches("") || angle3.matches("")) {
 
                     // If the missing angle range is 1, all angles are 1.
                     if (angle4OrMissingAngles == 1) {
@@ -132,14 +132,14 @@ public class AnglesQuadrilateralActivity extends AppCompatActivity {
     }
 
     /**
-     * Returns 0 if string is empty.
+     * Returns 1 if string is empty.
      * If not, returns input string as integer
      * @param angle The input angle as string
-     * @return int   The input angle or 0
+     * @return int   The input angle or 1
      */
     private int getAngle(String angle) {
 
-        if (angle.matches("")) return 0;
+        if (angle.matches("")) return 1;
 
         return Integer.parseInt(angle);
     }

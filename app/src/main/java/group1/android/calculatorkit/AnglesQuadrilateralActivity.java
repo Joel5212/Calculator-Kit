@@ -12,6 +12,9 @@ import android.widget.Toast;
 
 public class AnglesQuadrilateralActivity extends AppCompatActivity {
 
+    // Used for savedInstanceState
+    private static final String KEY_INDEX = "index";
+
     EditText etAngle1;
     EditText etAngle2;
     EditText etAngle3;
@@ -32,6 +35,15 @@ public class AnglesQuadrilateralActivity extends AppCompatActivity {
         etAngle1.setTransformationMethod(new NumericKeyBoardTransformationMethod());
         etAngle2.setTransformationMethod(new NumericKeyBoardTransformationMethod());
         etAngle3.setTransformationMethod(new NumericKeyBoardTransformationMethod());
+
+        // Checks if savedInstanceState is null
+        // This happens because it hasn't been initialized yet
+        // until after first activity is created
+        // If not null, retrieve the missing angle data
+        // This makes sure the data gets retrieved after configuration changes.
+        if (savedInstanceState != null) {
+            tvMissingAngle.setText(savedInstanceState.getString(KEY_INDEX, "Please Input Angle(s)"));
+        }
 
         btnFindMissingAngle.setOnClickListener(v -> {
 
@@ -143,6 +155,16 @@ public class AnglesQuadrilateralActivity extends AppCompatActivity {
             return false;
         }
         return true;
+    }
+
+
+    /*
+    Saves missing angle answer across configuration changes.
+    */
+    @Override
+    protected void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+        savedInstanceState.putString(KEY_INDEX, tvMissingAngle.getText().toString());
     }
 
 

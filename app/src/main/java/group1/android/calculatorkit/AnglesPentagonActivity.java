@@ -100,7 +100,7 @@ public class AnglesPentagonActivity extends AppCompatActivity {
                     }
 
                     // Set answer by setting the text as the following.
-                    String missingAngles = "The missing angles can be between 1 - " + angle5OrMissingAngles;
+                    String missingAngles = "The missing angles can be between 1 and " + angle5OrMissingAngles;
                     tvMissingAngle.setText(missingAngles);
                     return;
                 }

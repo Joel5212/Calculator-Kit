@@ -88,7 +88,7 @@ public class AnglesTriangleActivity extends AppCompatActivity {
                     }
 
                     // Set answer by setting the text as the following.
-                    String missingAngles = "The missing angles can be between 1 - " + angle3OrMissingAngles;
+                    String missingAngles = "The missing angles can be between 1 and " + angle3OrMissingAngles;
                     tvMissingAngle.setText(missingAngles);
                     return;
                 }

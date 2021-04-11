@@ -94,7 +94,7 @@ public class AnglesQuadrilateralActivity extends AppCompatActivity {
                     }
 
                     // Set answer by setting the text as the following.
-                    String missingAngles = "The missing angles can be between 1 - " + angle4OrMissingAngles;
+                    String missingAngles = "The missing angles can be between 1 and " + angle4OrMissingAngles;
                     tvMissingAngle.setText(missingAngles);
                     return;
                 }

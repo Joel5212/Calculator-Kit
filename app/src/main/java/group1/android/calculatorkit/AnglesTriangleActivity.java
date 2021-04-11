@@ -31,124 +31,118 @@ public class AnglesTriangleActivity extends AppCompatActivity {
         etAngle2.setTransformationMethod(new NumericKeyBoardTransformationMethod());
 
         btnFindMissingAngle.setOnClickListener(v -> {
-            
+
             String angle1 = etAngle1.getText().toString();
             String angle2 = etAngle2.getText().toString();
 
             tvMissingAngle.setText("");
 
-            /*
-            Input validation that checks of empty input
-             */
-            if (!angle1.matches("") && angle2.matches("")) {
-                /*
-                Angle 1 has an input, but not Angle 2
-                 */
-                int intAngle1 = Integer.parseInt(angle1);
+            // Check each angle to see if they are between 1 - 178
+            boolean angle1IsValid = isAngleValid(angle1, "1");
+            boolean angle2IsValid = isAngleValid(angle2, "2");
 
-                if (intAngle1 > 178) {
-                    Toast.makeText(this, "Invalid input: Angle 1 should not be greater than 178 degrees.", Toast.LENGTH_SHORT).show();
-                    return;
-                } else if (intAngle1 == 0) {
-                    Toast.makeText(this, "Invalid input: Angle 1 should not be 0 degrees.", Toast.LENGTH_SHORT).show();
+            // If all are valid, compute missing angles
+            if (angle1IsValid && angle2IsValid) {
+
+                // Changes the angle from String to int
+                // Also, if angle is an empty string, treat it as 0
+                int intAngle1 = getAngle(angle1);
+                int intAngle2 = getAngle(angle2);
+
+                // Sum all angles
+                int sumOfAngles = intAngle1 + intAngle2;
+
+                // Check if sum is valid
+                // If the sum of angles are above 359,
+                // do not compute since no quadrilateral
+                // can be above 360 degrees and a missing
+                // degree must be at least 1.
+                if (!isSumValid(sumOfAngles)) {
                     return;
                 }
 
-                int missingAnglesRange = 179 - intAngle1;
+                // Find the missing angle(s) by subtracting by the sum by 360.
+                int angle3OrMissingAngles = 180 - sumOfAngles;
 
-                /*
-                If the missing angle range is 1, both angles are 1.
-                 */
-                if (missingAnglesRange == 1) {
-                    String missingAngles = "Both missing angles are 1 degree.";
+                // If one of the empty strings were converted to 0,
+                // Then there are more than one missing angle to find.
+                if (intAngle1 == 0 || intAngle2 == 0) {
+
+                    // If the missing angle range is 1, all angles are 1.
+                    if (angle3OrMissingAngles == 1) {
+                        String missingAngles = "All missing angles are 1 degree.";
+                        tvMissingAngle.setText(missingAngles);
+                        return;
+                    }
+
+                    // Set answer by setting the text as the following.
+                    String missingAngles = "The missing angles can be between 1 - " + angle3OrMissingAngles;
                     tvMissingAngle.setText(missingAngles);
                     return;
                 }
 
-                String missingAngles = "The two angles can be between 1 - " + missingAnglesRange;
-                tvMissingAngle.setText(missingAngles);
-
-            } else if (!angle2.matches("") && angle1.matches("")) {
-                /*
-                Angle 2 has an input, but not Angle 1
-                 */
-                int intAngle2 = Integer.parseInt(angle2);
-
-                if (intAngle2 > 178) {
-                    Toast.makeText(this, "Invalid input: Angle 2 should not be greater than 178 degrees.", Toast.LENGTH_SHORT).show();
-                    return;
-                } else if (intAngle2 == 0) {
-                    Toast.makeText(this, "Invalid input: Angle 2 should not be 0 degrees.", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-
-                int missingAnglesRange = 179 - intAngle2;
-
-                /*
-                If the missing angle range is 1, both angles are 1.
-                 */
-                if (missingAnglesRange == 1) {
-                    String missingAngles = "Both missing angles are 1 degree.";
-                    tvMissingAngle.setText(missingAngles);
-                    return;
-                }
-
-                String missingAngles = "The two angles can be between 1 - " + missingAnglesRange;
-                tvMissingAngle.setText(missingAngles);
-
-            } else if (angle2.matches("") && angle1.matches("")) {
-                /*
-                Both Angles 1 and 2 do not have inputs.
-                 */
-                Toast.makeText(this, "Invalid input: Need values for Angle 1 and Angle 2.", Toast.LENGTH_SHORT).show();
-            } else {
-                int intAngle1 = Integer.parseInt(angle1);
-                int intAngle2 = Integer.parseInt(angle2);
-                int sumOfBothAngles = (intAngle1 + intAngle2);
-
-                /*
-                Checks if angles are greater than 180.
-                 */
-                if (sumOfBothAngles >= 180) {
-                    Toast.makeText(this, "Invalid input: Sum of angles should not be greater than or equal to 180.", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-
-                int angle3 = 180 - sumOfBothAngles;
-
-                /*
-                Input validation if angles are greater than 178.
-                Send a toast message to user indicating which angle is too large.
-                NOTE: The text input should not allow for negative values
-                so there is no need to check for negative values.
-                 */
-                if (intAngle1 > 178) {
-                    Toast.makeText(this, "Invalid input: Angle 1 should not be greater than 178 degrees.", Toast.LENGTH_SHORT).show();
-                    return;
-                } else if (intAngle2 > 178) {
-                    Toast.makeText(this, "Invalid input: Angle 2 should not be greater than 178 degrees.", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-
-                /*
-                Input validation to check if user input a 0 degrees angle.
-                 */
-                if (intAngle1 == 0) {
-                    Toast.makeText(this, "Invalid input: Angle 1 should not be 0 degrees.", Toast.LENGTH_SHORT).show();
-                    return;
-                } else if (intAngle2 == 0) {
-                    Toast.makeText(this, "Invalid input: Angle 2 should not be 0 degrees.", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-
-                tvMissingAngle.setText(Integer.toString(angle3));
+                // If there is only one missing angle, set the text as just a number.
+                tvMissingAngle.setText(Integer.toString(angle3OrMissingAngles));
             }
         });
     }
 
-    /*
-    Class is needed to change password input text that shows bullets as text
-    to not show bullets
+    /**
+     * Returns false if angle is 0 or greater than 178.
+     * If not, the angle is valid or an empty string, return true.
+     * @param angle       String of the angle
+     * @param angleNumber String of the angle's number
+     * @return boolean    Whether or not the angle is valid
+     */
+    private boolean isAngleValid(String angle, String angleNumber) {
+
+        if (angle.matches("")) return true;
+
+        int intAngle = Integer.parseInt(angle);
+
+        if (intAngle > 178) {
+            Toast.makeText(this, "Invalid input: Angle " + angleNumber + " should not be greater than 178 degrees.", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+
+        if (intAngle == 0) {
+            Toast.makeText(this, "Invalid input: Angle " + angleNumber + " should not be 0 degrees.", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+
+        return true;
+    }
+
+    /**
+     * Returns 0 if string is empty.
+     * If not, returns input string as integer
+     * @param angle1 The input angle as string
+     * @return int   The input angle or 0
+     */
+    private int getAngle(String angle1) {
+
+        if (angle1.matches("")) return 0;
+
+        return Integer.parseInt(angle1);
+    }
+
+    /**
+     * Returns a boolean if the sum if greater than 360.
+     * @param sumOfAngles Integer of the sum of angles
+     * @return boolean    Whether or not sum is valid.
+     */
+    private boolean isSumValid(int sumOfAngles) {
+        if (sumOfAngles > 179) {
+            Toast.makeText(this, "Invalid input: Sum of angles should not be greater than or equal to 180.", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        return true;
+    }
+
+
+    /**
+     * Class is needed to change password input text that shows bullets as text
+     * to not show bullets
      */
     private class NumericKeyBoardTransformationMethod extends PasswordTransformationMethod {
         @Override

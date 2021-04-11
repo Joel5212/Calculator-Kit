@@ -53,15 +53,15 @@ public class AnglesTriangleActivity extends AppCompatActivity {
                 int sumOfAngles = intAngle1 + intAngle2;
 
                 // Check if sum is valid
-                // If the sum of angles are above 359,
+                // If the sum of angles are above 179,
                 // do not compute since no quadrilateral
-                // can be above 360 degrees and a missing
+                // can be above 180 degrees and a missing
                 // degree must be at least 1.
                 if (!isSumValid(sumOfAngles)) {
                     return;
                 }
 
-                // Find the missing angle(s) by subtracting by the sum by 360.
+                // Find the missing angle(s) by subtracting by the sum by 180.
                 int angle3OrMissingAngles = 180 - sumOfAngles;
 
                 // If one of the empty strings were converted to 0,
@@ -127,13 +127,13 @@ public class AnglesTriangleActivity extends AppCompatActivity {
     }
 
     /**
-     * Returns a boolean if the sum if greater than 360.
+     * Returns a boolean if the sum if greater than 179.
      * @param sumOfAngles Integer of the sum of angles
      * @return boolean    Whether or not sum is valid.
      */
     private boolean isSumValid(int sumOfAngles) {
         if (sumOfAngles > 179) {
-            Toast.makeText(this, "Invalid input: Sum of angles should not be greater than or equal to 180.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Invalid input: Sum of angles should not be greater than or equal to 179.", Toast.LENGTH_SHORT).show();
             return false;
         }
         return true;

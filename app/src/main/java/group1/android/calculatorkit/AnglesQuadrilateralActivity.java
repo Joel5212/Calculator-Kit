@@ -139,7 +139,7 @@ public class AnglesQuadrilateralActivity extends AppCompatActivity {
      */
     private boolean isSumValid(int sumOfAngles) {
         if (sumOfAngles > 359) {
-            Toast.makeText(this, "Invalid input: Sum of angles should not be greater than or equal to 360.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Invalid input: Sum of angles should not be greater than or equal to 359.", Toast.LENGTH_SHORT).show();
             return false;
         }
         return true;

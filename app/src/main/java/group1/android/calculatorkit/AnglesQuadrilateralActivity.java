@@ -122,14 +122,14 @@ public class AnglesQuadrilateralActivity extends AppCompatActivity {
     /**
      * Returns 0 if string is empty.
      * If not, returns input string as integer
-     * @param angle1 The input angle as string
+     * @param angle The input angle as string
      * @return int   The input angle or 0
      */
-    private int getAngle(String angle1) {
+    private int getAngle(String angle) {
 
-        if (angle1.matches("")) return 0;
+        if (angle.matches("")) return 0;
 
-        return Integer.parseInt(angle1);
+        return Integer.parseInt(angle);
     }
 
     /**

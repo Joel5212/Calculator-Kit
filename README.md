@@ -76,10 +76,10 @@ A calculator app that is featuring different calculators on Android phone.
 * Conversion calculator
 
 
-## Wireframes
+## 4. Wireframes
 <img src="wireframe.jpg" width=1350><br>
 
-## Schema 
+## 5. Schema 
 ### Models
 #### Post
 
@@ -90,8 +90,8 @@ Application does not use network connections
 N/A 
 Application does not use network connections
 
-### 4. App Walkthough GIF
+### 6. App Walkthough GIF
 
-## Calculator Kit --> Geometry Calculator --> Angles
+#### Calculator Kit -> Geometry Calculator -> Angles
 
 <img src="walkthroughAnglesCalculator.gif" width=500><br>

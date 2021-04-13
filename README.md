@@ -22,7 +22,7 @@ A calculator app that is featuring different calculators on Android phone.
 
 **Required Must-have Stories**
 
-- [x] Main Menu - User navigate to the calculator user wants to use
+- [x] Main Menu - User can navigate to the calculator user wants to use
    - [x] Simple calculator
    - [x] Geometry calculator
    - [x] Matrix calculator

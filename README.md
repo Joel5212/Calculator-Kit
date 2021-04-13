@@ -22,9 +22,25 @@ A calculator app that is featuring different calculators on Android phone.
 
 **Required Must-have Stories**
 
-* User inputs data and receives computated answers.
-* Calculator has different screens and ability to perform their own tasks.
-* User switchs between multiple calculator types.
+-[x] Main Menu - User navigate to the calculator user wants to use
+   -[x] Simple calculator
+   -[x] Geometry calculator
+   -[x] Matrix calculator
+   -[x] Conversion calculator
+-[ ] Simple Calculator
+   -[ ] Performs addition, subtraction, multiplication, and division
+-[ ] Geometry Calculator
+   -[x] User can navigate to four other calculators: Area, Surface Area, and Volume; Intersections; Distance; Angles
+   -[ ] Allows user to choose calculation and shape to perform geometry calculation
+      -[ ] Area, Surface Area, and Volume
+      -[ ] Intersections
+      -[ ] Distance
+      -[x] Angles
+-[ ] Matrix Calculator
+   -[ ] Allows user to input matrix dimension to solve matrix problem
+-[ ] Conversion Calculator
+   -[ ] Allows user to choose from unit to unit to want to convert and calculate the answer.
+
 
 **Optional Nice-to-have Stories**
 
@@ -73,3 +89,9 @@ Application does not use network connections
 #### List of network requests by screen
 N/A 
 Application does not use network connections
+
+### 4. App Walkthough GIF
+
+## Calculator Kit --> Geometry Calculator --> Angles
+
+<img src="walkthroughAnglesCalculator.gif" width=500><br>

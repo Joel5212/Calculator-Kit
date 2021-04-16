@@ -22,9 +22,25 @@ A calculator app that is featuring different calculators on Android phone.
 
 **Required Must-have Stories**
 
-* User inputs data and receives computated answers.
-* Calculator has different screens and ability to perform their own tasks.
-* User switchs between multiple calculator types.
+- [x] Main Menu - User can navigate to the calculator user wants to use
+   - [x] Simple calculator
+   - [x] Geometry calculator
+   - [x] Matrix calculator
+   - [x] Conversion calculator
+- [ ] Simple Calculator
+   - [ ] Performs addition, subtraction, multiplication, and division
+- [ ] Geometry Calculator
+   - [x] User can navigate to four other calculators: Area, Surface Area, and Volume; Intersections; Distance; Angles
+   - [ ] Allows user to choose calculation and shape to perform geometry calculation
+      - [ ] Area, Surface Area, and Volume
+      - [ ] Intersections
+      - [ ] Distance
+      - [x] Angles
+- [ ] Matrix Calculator
+   - [ ] Allows user to input matrix dimension to solve matrix problem
+- [ ] Conversion Calculator
+   - [ ] Allows user to choose from unit to unit to want to convert and calculate the answer.
+
 
 **Optional Nice-to-have Stories**
 
@@ -67,62 +83,16 @@ A calculator app that is featuring different calculators on Android phone.
 ### Models
 #### Post
 
-   | Property      | Type     | Description |
-   | ------------- | -------- | ------------|
-   | objectId      | String   | unique id for the user post (default field) |
-   | author        | Pointer to User| image author |
-   | image         | File     | image that user posts |
-   | caption       | String   | image caption by author |
-   | commentsCount | Number   | number of comments that has been posted to an image |
-   | likesCount    | Number   | number of likes for the post |
-   | createdAt     | DateTime | date when post is created (default field) |
-   | updatedAt     | DateTime | date when post is last updated (default field) |
+N/A 
+Application does not use network connections
 ### Networking
 #### List of network requests by screen
-   - Home Feed Screen
-      - (Read/GET) Query all posts where user is author
-         ```swift
-         let query = PFQuery(className:"Post")
-         query.whereKey("author", equalTo: currentUser)
-         query.order(byDescending: "createdAt")
-         query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
-            if let error = error { 
-               print(error.localizedDescription)
-            } else if let posts = posts {
-               print("Successfully retrieved \(posts.count) posts.")
-           // TODO: Do something with posts...
-            }
-         }
-         ```
-      - (Create/POST) Create a new like on a post
-      - (Delete) Delete existing like
-      - (Create/POST) Create a new comment on a post
-      - (Delete) Delete existing comment
-   - Create Post Screen
-      - (Create/POST) Create a new post object
-   - Profile Screen
-      - (Read/GET) Query logged in user object
-      - (Update/PUT) Update user profile image
-#### [OPTIONAL:] Existing API Endpoints
-##### An API Of Ice And Fire
-- Base URL - [http://www.anapioficeandfire.com/api](http://www.anapioficeandfire.com/api)
+N/A 
+Application does not use network connections
 
-   HTTP Verb | Endpoint | Description
-   ----------|----------|------------
-    `GET`    | /characters | get all characters
-    `GET`    | /characters/?name=name | return specific character by name
-    `GET`    | /houses   | get all houses
-    `GET`    | /houses/?name=name | return specific house by name
+## App Walkthough GIF
 
-##### Game of Thrones API
-- Base URL - [https://api.got.show/api](https://api.got.show/api)
+### Angles Calculator
+#### Navigation: Calculator Kit -> Geometry Calculator -> Angles
 
-   HTTP Verb | Endpoint | Description
-   ----------|----------|------------
-    `GET`    | /cities | gets all cities
-    `GET`    | /cities/byId/:id | gets specific city by :id
-    `GET`    | /continents | gets all continents
-    `GET`    | /continents/byId/:id | gets specific continent by :id
-    `GET`    | /regions | gets all regions
-    `GET`    | /regions/byId/:id | gets specific region by :id
-    `GET`    | /characters/paths/:name | gets a character's path with a given name
+<img src="walkthroughAnglesCalculator.gif" width=500><br>

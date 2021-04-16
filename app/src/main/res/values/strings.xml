@@ -8,4 +8,9 @@
     <string name="intersections">Intersections</string>
     <string name="distance">Distance</string>
     <string name="angles">Angles</string>
+    <string name="select_a_shape">Select a Shape</string>
+    <string name="triangle">Triangle</string>
+    <string name="quadrilateral">Quadrilateral</string>
+    <string name="pentagon">Pentagon</string>
+    <string name="hexagon">Hexagon</string>
 </resources>

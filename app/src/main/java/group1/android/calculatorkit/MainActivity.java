@@ -23,36 +23,24 @@ public class MainActivity extends AppCompatActivity {
         btnMatrixCalculator = findViewById(R.id.btnMatrixCalculator);
         btnConversionCalculator = findViewById(R.id.btnConversionCalculator);
 
-        btnSimpleCalculator.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, SimpleCalculatorActivity.class);
-                startActivity(i);
-            }
+        btnSimpleCalculator.setOnClickListener(v -> {
+            Intent i = new Intent(MainActivity.this, SimpleCalculatorActivity.class);
+            startActivity(i);
         });
 
-        btnGeometryCalculator.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, GeometryCalculatorActivity.class);
-                startActivity(i);
-            }
+        btnGeometryCalculator.setOnClickListener(v -> {
+            Intent i = new Intent(MainActivity.this, GeometryCalculatorActivity.class);
+            startActivity(i);
         });
 
-        btnMatrixCalculator.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, MatrixCalculatorActivity.class);
-                startActivity(i);
-            }
+        btnMatrixCalculator.setOnClickListener(v -> {
+            Intent i = new Intent(MainActivity.this, MatrixCalculatorActivity.class);
+            startActivity(i);
         });
 
-        btnConversionCalculator.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, ConversionCalculatorActivity.class);
-                startActivity(i);
-            }
+        btnConversionCalculator.setOnClickListener(v -> {
+            Intent i = new Intent(MainActivity.this, ConversionCalculatorActivity.class);
+            startActivity(i);
         });
     }
 }

@@ -16,7 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SimpleCalculatorActivity"></activity>
+        <activity android:name=".SimpleCalculatorActivity"
+            android:screenOrientation="portrait"></activity>
         <activity android:name=".GeometryCalculatorActivity"></activity>
         <activity android:name=".MatrixCalculatorActivity"></activity>
         <activity android:name=".ConversionCalculatorActivity"></activity>

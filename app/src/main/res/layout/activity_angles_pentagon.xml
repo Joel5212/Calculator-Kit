@@ -4,14 +4,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/calculatorbackground">
 
     <TextView
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:textSize="24dp"
-        android:text="Angles Pentagon" />
+        android:text="Angles Pentagon"
+        android:textColor="@color/white" />
 
     <EditText
         android:id="@+id/etAngle1"
@@ -21,7 +23,10 @@
         android:gravity="center"
         android:ems="10"
         android:hint="Angle #1"
-        android:inputType = "numberPassword"/>
+        android:inputType = "numberPassword"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white" />
 
     <EditText
         android:id="@+id/etAngle2"
@@ -31,7 +36,10 @@
         android:gravity="center"
         android:ems="10"
         android:hint="Angle #2"
-        android:inputType = "numberPassword"/>
+        android:inputType = "numberPassword"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white" />
 
     <EditText
         android:id="@+id/etAngle3"
@@ -41,7 +49,10 @@
         android:gravity="center"
         android:ems="10"
         android:hint="Angle #3"
-        android:inputType = "numberPassword"/>
+        android:inputType = "numberPassword"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white" />
 
     <EditText
         android:id="@+id/etAngle4"
@@ -51,7 +62,10 @@
         android:gravity="center"
         android:ems="10"
         android:hint="Angle #4"
-        android:inputType = "numberPassword"/>
+        android:inputType = "numberPassword"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white" />
 
     <TextView
         android:layout_width="300dp"
@@ -59,7 +73,8 @@
         android:layout_margin="12dp"
         android:gravity="center"
         android:textSize="18dp"
-        android:text="Missing Angle(s):" />
+        android:text="Missing Angle(s):"
+        android:textColor="@color/white" />
 
     <TextView
         android:id="@+id/tvMissingAngle"
@@ -68,14 +83,17 @@
         android:layout_margin="12dp"
         android:gravity="center"
         android:textSize="18dp"
-        android:text="Please Input Angle(s)" />
+        android:text="Please Input Angle(s)"
+        android:textColor="@color/white" />
 
     <Button
         android:id="@+id/btnFindMissingAngle"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_margin="12dp"
-        android:text="Find missing angle(s)"/>
+        android:text="Find missing angle(s)"
+        android:background="@drawable/circle"
+        android:textColor="@color/white" />
 
 
 </LinearLayout>

@@ -4,14 +4,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/calculatorbackground">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:textSize="24dp"
-        android:text="Geometry Calculator" />
+        android:text="Geometry Calculator"
+        android:textColor="@color/white"/>
 
     <Button
         android:id="@+id/btnAreaSurfaceAreaAndVolume"
@@ -19,27 +21,35 @@
         android:layout_height="wrap_content"
         android:layout_margin="12dp"
         android:shadowColor="#4D04CF"
-        android:text="@string/area_surface_area_and_volume" />
+        android:text="@string/area_surface_area_and_volume"
+        android:background="@drawable/circle"
+        android:textColor="@color/white"/>
 
     <Button
         android:id="@+id/btnIntersections"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_margin="12dp"
-        android:text="@string/intersections" />
+        android:text="@string/intersections"
+        android:background="@drawable/circle"
+        android:textColor="@color/white" />
 
     <Button
         android:id="@+id/btnDistance"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_margin="12dp"
-        android:text="@string/distance" />
+        android:text="@string/distance"
+        android:background="@drawable/circle"
+        android:textColor="@color/white"/>
 
     <Button
         android:id="@+id/btnAngles"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_margin="12dp"
-        android:text="@string/angles" />
+        android:text="@string/angles"
+        android:background="@drawable/circle"
+        android:textColor="@color/white"/>
 
 </LinearLayout>

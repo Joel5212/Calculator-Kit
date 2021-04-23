@@ -93,3 +93,6 @@ Application does not use network connections
 ## App Walkthough GIF
 
 <img src="walkthroughUI.gif" width=500><br>
+
+
+<img src="IntersectionsCirclesAndLines" width=500><br>

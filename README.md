@@ -92,7 +92,4 @@ Application does not use network connections
 
 ## App Walkthough GIF
 
-### Angles Calculator
-#### Navigation: Calculator Kit -> Geometry Calculator -> Angles
-
-<img src="walkthroughAnglesCalculator.gif" width=500><br>
+<img src="walkthroughUI.gif" width=500><br>

@@ -11,92 +11,100 @@
         android:id="@+id/tvPlus3"
         android:layout_width="16dp"
         android:layout_height="33dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="20dp"
         android:shadowColor="#ECE4E4"
         android:text=" +"
+        android:textColor="#FBFBFB"
         android:textSize="18sp"
         app:layout_constraintStart_toEndOf="@+id/tvX3"
-        app:layout_constraintTop_toBottomOf="@+id/tvLine2" />
+        app:layout_constraintTop_toBottomOf="@+id/tvPlus2" />
 
     <TextView
         android:id="@+id/tvX"
         android:layout_width="12dp"
         android:layout_height="23dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="120dp"
         android:shadowColor="#ECE4E4"
         android:text="x"
+        android:textColor="#FFFFFF"
         android:textSize="18sp"
         app:layout_constraintStart_toEndOf="@+id/etSlope"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <EditText
         android:id="@+id/etb"
         android:layout_width="64dp"
         android:layout_height="41dp"
-        android:layout_marginTop="104dp"
+        android:layout_marginTop="108dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="text"
         android:shadowColor="#ECE4E4"
+        android:textColor="#FFFDFD"
         android:textSize="12sp"
         app:layout_constraintStart_toEndOf="@+id/tvPlus"
-        app:layout_constraintTop_toTopOf="@+id/textView10" />
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <TextView
         android:id="@+id/tvPlus2"
         android:layout_width="16dp"
         android:layout_height="33dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="20dp"
         android:shadowColor="#ECE4E4"
         android:text=" +"
+        android:textColor="#FAF9F9"
         android:textSize="18sp"
         app:layout_constraintStart_toEndOf="@+id/tvX2"
-        app:layout_constraintTop_toBottomOf="@+id/tvLine1" />
+        app:layout_constraintTop_toBottomOf="@+id/tvPlus" />
 
     <EditText
         android:id="@+id/etb3"
         android:layout_width="64dp"
         android:layout_height="41dp"
-        android:layout_marginTop="220dp"
+        android:layout_marginTop="12dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="text"
         android:shadowColor="#ECE4E4"
+        android:textColor="#FDFCFC"
         android:textSize="12sp"
         app:layout_constraintStart_toEndOf="@+id/tvPlus3"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/etb2" />
 
     <TextView
         android:id="@+id/tvX3"
         android:layout_width="12dp"
         android:layout_height="23dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="28dp"
         android:shadowColor="#ECE4E4"
         android:text="x"
+        android:textColor="#FDFCFC"
         android:textSize="18sp"
         app:layout_constraintStart_toEndOf="@+id/etSlope3"
-        app:layout_constraintTop_toBottomOf="@+id/tvLine2" />
+        app:layout_constraintTop_toBottomOf="@+id/tvX2" />
 
     <EditText
         android:id="@+id/etb2"
         android:layout_width="64dp"
         android:layout_height="41dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="text"
         android:shadowColor="#ECE4E4"
+        android:textColor="#FAF8F8"
         android:textSize="12sp"
         app:layout_constraintStart_toEndOf="@+id/tvPlus2"
-        app:layout_constraintTop_toBottomOf="@+id/tvLine1" />
+        app:layout_constraintTop_toBottomOf="@+id/etb" />
 
     <TextView
         android:id="@+id/tvX2"
         android:layout_width="12dp"
         android:layout_height="23dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="28dp"
         android:shadowColor="#ECE4E4"
         android:text="x"
+        android:textColor="#FBFAFA"
         android:textSize="18sp"
         app:layout_constraintStart_toEndOf="@+id/etSlope2"
-        app:layout_constraintTop_toBottomOf="@+id/tvLine1" />
+        app:layout_constraintTop_toBottomOf="@+id/tvX" />
 
     <TextView
         android:id="@+id/tvPlus"
@@ -105,6 +113,7 @@
         android:layout_marginTop="116dp"
         android:shadowColor="#ECE4E4"
         android:text=" +"
+        android:textColor="#F8F5F5"
         android:textSize="18sp"
         app:layout_constraintStart_toEndOf="@+id/tvX"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
@@ -114,39 +123,42 @@
         android:layout_width="64dp"
         android:layout_height="41dp"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="108dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="text"
         android:shadowColor="#ECE4E4"
+        android:textColor="#FDFDFD"
         android:textSize="12sp"
         app:layout_constraintStart_toEndOf="@+id/tvEqual"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <EditText
         android:id="@+id/etSlope2"
         android:layout_width="64dp"
         android:layout_height="41dp"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="text"
         android:shadowColor="#ECE4E4"
+        android:textColor="#FBFAFA"
         android:textSize="12sp"
         app:layout_constraintStart_toEndOf="@+id/tvEqual2"
-        app:layout_constraintTop_toBottomOf="@+id/tvLine1" />
+        app:layout_constraintTop_toBottomOf="@+id/etSlope" />
 
     <EditText
         android:id="@+id/etSlope3"
         android:layout_width="64dp"
         android:layout_height="41dp"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="text"
         android:shadowColor="#ECE4E4"
+        android:textColor="#FFFCFC"
         android:textSize="12sp"
         app:layout_constraintStart_toEndOf="@+id/tvEqual3"
-        app:layout_constraintTop_toBottomOf="@+id/tvLine2" />
+        app:layout_constraintTop_toBottomOf="@+id/etSlope2" />
 
     <TextView
         android:id="@+id/tvEqual"
@@ -156,6 +168,7 @@
         android:layout_marginTop="116dp"
         android:shadowColor="#ECE4E4"
         android:text="="
+        android:textColor="#FBF8F8"
         android:textSize="18sp"
         app:layout_constraintStart_toEndOf="@+id/tvY"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
@@ -165,127 +178,90 @@
         android:layout_width="9dp"
         android:layout_height="33dp"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="20dp"
         android:shadowColor="#ECE4E4"
         android:text="="
+        android:textColor="#FAF8F8"
         android:textSize="18sp"
         app:layout_constraintStart_toEndOf="@+id/tvY2"
-        app:layout_constraintTop_toBottomOf="@+id/tvLine1" />
+        app:layout_constraintTop_toBottomOf="@+id/tvEqual" />
 
     <TextView
         android:id="@+id/tvEqual3"
         android:layout_width="9dp"
         android:layout_height="33dp"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="20dp"
         android:shadowColor="#ECE4E4"
         android:text="="
+        android:textColor="#FFFDFD"
         android:textSize="18sp"
         app:layout_constraintStart_toEndOf="@+id/tvY3"
-        app:layout_constraintTop_toBottomOf="@+id/tvLine2" />
+        app:layout_constraintTop_toBottomOf="@+id/tvEqual2" />
 
     <TextView
         android:id="@+id/tvY3"
         android:layout_width="13dp"
         android:layout_height="23dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="28sp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="32dp"
         android:shadowColor="#ECE4E4"
         android:text=" y"
+        android:textColor="#FBFAFA"
         android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/tvLine3"
-        app:layout_constraintTop_toBottomOf="@+id/tvLine2" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvY2" />
 
     <TextView
         android:id="@+id/tvY2"
         android:layout_width="13dp"
         android:layout_height="23dp"
-        android:layout_marginStart="4dp"
+        android:layout_marginStart="120dp"
         android:layout_marginTop="28dp"
         android:shadowColor="#ECE4E4"
         android:text=" y"
+        android:textColor="#FAF3F3"
         android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/tvLine2"
-        app:layout_constraintTop_toBottomOf="@+id/tvLine1" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvY" />
 
     <TextView
         android:id="@+id/tvY"
         android:layout_width="13dp"
         android:layout_height="23dp"
-        android:layout_marginStart="4dp"
+        android:layout_marginStart="120dp"
         android:layout_marginTop="120dp"
         android:shadowColor="#ECE4E4"
         android:text=" y"
+        android:textColor="#FDFAFA"
         android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/tvLine1"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
-
-    <TextView
-        android:id="@+id/tvLine1"
-        android:layout_width="122dp"
-        android:layout_height="23dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="104dp"
-        android:background="@color/purple_500"
-        android:backgroundTint="#673AB7"
-        android:text="Enter Line #1:"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/etCheckBox"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
-
-    <TextView
-        android:id="@+id/tvLine2"
-        android:layout_width="122dp"
-        android:layout_height="23dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="32dp"
-        android:background="@color/purple_500"
-        android:backgroundTint="#673AB7"
-        android:text="Enter Line #2:"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/etCheckBox2"
-        app:layout_constraintTop_toBottomOf="@+id/tvLine1" />
-
-    <TextView
-        android:id="@+id/tvLine3"
-        android:layout_width="122dp"
-        android:layout_height="23dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="32dp"
-        android:background="@color/purple_500"
-        android:backgroundTint="#673AB7"
-        android:text="Enter Line #3:"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/etCheckBox3"
-        app:layout_constraintTop_toBottomOf="@+id/tvLine2" />
 
     <Button
         android:id="@+id/btnIntersection"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="120dp"
+        android:layout_height="45dp"
         android:layout_marginTop="40dp"
         android:background="@drawable/circle"
         android:backgroundTint="#673AB7"
-        android:text="Find Intersection"
+        android:text="Calculate"
         android:textColor="#FFFFFF"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvLine3" />
+        app:layout_constraintTop_toBottomOf="@+id/tvYInt" />
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="126dp"
-        android:layout_height="38dp"
+        android:layout_width="189dp"
+        android:layout_height="44dp"
         android:layout_marginTop="16dp"
         android:text="Enter Lines"
         android:textColor="#FFFFFF"
-        android:textSize="24sp"
+        android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -293,23 +269,20 @@
         android:id="@+id/tvXInt"
         android:layout_width="162dp"
         android:layout_height="27dp"
-        android:layout_marginTop="76dp"
-        android:layout_marginEnd="112dp"
-        android:background="#673AB7"
-        android:backgroundTint="#673AB7"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="50dp"
         android:textColor="#F8F5F5"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnIntersection" />
+        app:layout_constraintStart_toEndOf="@+id/tvXResult"
+        app:layout_constraintTop_toBottomOf="@+id/etSlope3" />
 
     <TextView
         android:id="@+id/tvYResult"
         android:layout_width="27dp"
         android:layout_height="27dp"
-        android:layout_marginStart="108dp"
+        android:layout_marginStart="100dp"
         android:layout_marginTop="16dp"
-        android:background="#673AB7"
-        android:backgroundTint="#673AB7"
         android:text="Y:"
         android:textColor="#F8F3F3"
         android:textSize="24sp"
@@ -320,77 +293,24 @@
         android:id="@+id/tvXResult"
         android:layout_width="27dp"
         android:layout_height="27dp"
-        android:layout_marginStart="108dp"
-        android:layout_marginTop="76dp"
-        android:background="#673AB7"
-        android:backgroundTint="#673AB7"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="32dp"
         android:text="X:"
         android:textColor="#F8F3F3"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnIntersection" />
+        app:layout_constraintTop_toBottomOf="@+id/tvY3" />
 
     <TextView
         android:id="@+id/tvYInt"
         android:layout_width="162dp"
         android:layout_height="27dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="112dp"
-        android:background="#673AB7"
-        android:backgroundTint="#673AB7"
+        android:layout_marginEnd="50dp"
         android:textColor="#F8F5F5"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvYResult"
         app:layout_constraintTop_toBottomOf="@+id/tvXInt" />
 
-    <EditText
-        android:id="@+id/etCheckBox"
-        android:layout_width="20dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="168dp"
-        android:ems="10"
-        android:hint="X"
-        android:inputType="textPersonName"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/etCheckBox2"
-        android:layout_width="20dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="228dp"
-        android:ems="10"
-        android:hint="X"
-        android:inputType="textPersonName"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/etCheckBox3"
-        android:layout_width="20dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="284dp"
-        android:ems="10"
-        android:hint="X"
-        android:inputType="textPersonName"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="197dp"
-        android:layout_height="17dp"
-        android:layout_marginTop="4dp"
-        android:text="(Enter X for each line used)"
-        android:textColor="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.542"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 </android.support.constraint.ConstraintLayout>

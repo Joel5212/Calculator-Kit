@@ -9,6 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CalculatorKit">
+        <activity android:name=".IntersectionActivity"></activity>
+        <activity android:name=".CircleIntersectionActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -16,19 +18,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SimpleCalculatorActivity"
-            android:screenOrientation="portrait"></activity>
-        <activity android:name=".GeometryCalculatorActivity"></activity>
-        <activity android:name=".MatrixCalculatorActivity"></activity>
-        <activity android:name=".ConversionCalculatorActivity"></activity>
-        <activity android:name=".AreaSurfaceAreaAndVolumeActivity"></activity>
-        <activity android:name=".IntersectionsActivity"></activity>
-        <activity android:name=".DistanceActivity"></activity>
-        <activity android:name=".AnglesActivity"></activity>
-        <activity android:name=".AnglesTriangleActivity"></activity>
-        <activity android:name=".AnglesQuadrilateralActivity"></activity>
-        <activity android:name=".AnglesPentagonActivity"></activity>
-        <activity android:name=".AnglesHexagonActivity"></activity>
+        <activity
+            android:name=".SimpleCalculatorActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".GeometryCalculatorActivity" />
+        <activity android:name=".MatrixCalculatorActivity" />
+        <activity android:name=".ConversionCalculatorActivity" />
+        <activity android:name=".AreaSurfaceAreaAndVolumeActivity" />
+        <activity android:name=".LineIntersectionActivity" />
+        <activity android:name=".DistanceActivity" />
+        <activity android:name=".AnglesActivity" />
+        <activity android:name=".AnglesTriangleActivity" />
+        <activity android:name=".AnglesQuadrilateralActivity" />
+        <activity android:name=".AnglesPentagonActivity" />
+        <activity android:name=".AnglesHexagonActivity" />
     </application>
 
 </manifest>

@@ -10,6 +10,8 @@ public class IntersectionActivity extends AppCompatActivity {
 
     Button btnLineIntersection;
     Button btnCircleIntersection;
+    Button btnCircleAndLineIntersection;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +19,7 @@ public class IntersectionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_intersection);
         btnLineIntersection = findViewById(R.id.btnLineIntersection);
         btnCircleIntersection = findViewById(R.id.btnCircleIntersection);
+        btnCircleAndLineIntersection = findViewById(R.id.btnCircleAndLineIntersection);
 
         btnLineIntersection.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -30,6 +33,14 @@ public class IntersectionActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(IntersectionActivity.this, CircleIntersectionActivity.class);
+                startActivity(i);
+            }
+        });
+
+        btnCircleAndLineIntersection.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(IntersectionActivity.this, CircleAndLineIntersectionActivity.class);
                 startActivity(i);
             }
         });

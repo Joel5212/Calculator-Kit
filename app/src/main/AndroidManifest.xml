@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CalculatorKit">
-        <activity android:name=".IntersectionActivity"></activity>
+        <activity android:name=".CircleAndLineIntersectionActivity"></activity>
+        <activity android:name=".IntersectionActivity" />
         <activity android:name=".CircleIntersectionActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

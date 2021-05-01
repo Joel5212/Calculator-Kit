@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/calculatorbackground"
+    tools:context=".CircleAndLineIntersectionActivity">
+
+
+    <TextView
+        android:id="@+id/tvCLDecimals"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="36dp"
+        android:textColor="#F8F6F6"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/etCLB" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:text="Intersection(s):"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.547" />
+
+    <TextView
+        android:id="@+id/tvCLX1"
+        android:layout_width="130dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="48dp"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintStart_toEndOf="@+id/tvCLX"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/tvCLY1"
+        android:layout_width="130dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="12dp"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintStart_toEndOf="@+id/tvCLY"
+        app:layout_constraintTop_toBottomOf="@+id/tvCLX1" />
+
+    <TextView
+        android:id="@+id/tvCLX2"
+        android:layout_width="130dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="48dp"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintStart_toEndOf="@+id/tvCLX1"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/tvCLY2"
+        android:layout_width="130dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintStart_toEndOf="@+id/tvCLY1"
+        app:layout_constraintTop_toBottomOf="@+id/tvCLX2" />
+
+    <EditText
+        android:id="@+id/etCLM"
+        android:layout_width="200dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Slope"
+        android:inputType="text"
+        android:textColor="#FDFDFD"
+        android:textColorHint="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <EditText
+        android:id="@+id/etCLB"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="4dp"
+        android:ems="10"
+        android:hint="B Value"
+        android:inputType="text"
+        android:shadowColor="#ECE4E4"
+        android:textColor="#FFFDFD"
+        android:textColorHint="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Circle"
+        android:textColor="#F8EFEF"
+        android:textColorHint="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Line"
+        android:textColor="#F8EFEF"
+        android:textColorHint="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etCLY" />
+
+    <EditText
+        android:id="@+id/etCLX"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="X"
+        android:inputType="textPersonName"
+        android:textColor="#FBFBFB"
+        android:textColorHint="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <EditText
+        android:id="@+id/etCLY"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="Y"
+        android:inputType="textPersonName"
+        android:textColor="#FDFBFB"
+        android:textColorHint="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/etCLX"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <EditText
+        android:id="@+id/etCLRadius"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="Radius"
+        android:inputType="textPersonName"
+        android:textColor="#FAF7F7"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/etCLY"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <Button
+        android:id="@+id/btnCL"
+        android:layout_width="120dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="140dp"
+        android:background="@drawable/circle"
+        android:text="CALCULATE"
+        android:textColor="#FAF5F5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <SeekBar
+        android:id="@+id/sbCL"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="245dp"
+        android:layout_height="25dp"
+        android:layout_marginBottom="16dp"
+        android:max="16"
+        android:progress="0"
+        app:layout_constraintBottom_toTopOf="@+id/textView6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.572"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:layout_constraintVertical_bias="0.372" />
+
+    <TextView
+        android:id="@+id/tvCLX"
+        android:layout_width="15dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="48dp"
+        android:textColor="#F6F4F4"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        tools:text="X" />
+
+    <TextView
+        android:id="@+id/tvCLY"
+        android:layout_width="15dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="12dp"
+        android:textColor="#FBFAFA"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCLX"
+        tools:text="Y" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="36dp"
+        android:hint="Digits after the decimal point:"
+        android:textColor="#FAF8F8"
+        android:textColorHint="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etCLM" />
+</android.support.constraint.ConstraintLayout>

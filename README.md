@@ -96,3 +96,5 @@ Application does not use network connections
 
 
 <img src="IntersectionsCirclesAndLines.gif" width=500><br>
+
+<img src="IntersectionOfCircleAndLineCalculator.gif" width=500><br>

@@ -1,17 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/calculatorbackground"
+    tools:context=".MatrixCalculatorActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/tvMatrixCalculator"
+        android:layout_width="197dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="32dp"
         android:text="Matrix Calculator"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="#ECE7E7"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvMatrixA"
+        android:layout_width="96dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="172dp"
+        android:text="Matrix A Dimensions:"
+        android:textColor="#F3EFEF"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvMatrixB"
+        android:layout_width="93dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="43dp"
+        android:text="Matrix B Dimensions: "
+        android:textColor="#F4EEEE"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvRow"
+        android:layout_width="64dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="46dp"
+        android:text="Row"
+        android:textColor="#F1EDED"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMatrixCalculator" />
+
+    <TextView
+        android:id="@+id/tvColumn"
+        android:layout_width="79dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginEnd="42dp"
+        android:text="Column"
+        android:textColor="#F3ECEC"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMatrixCalculator" />
+
+    <EditText
+        android:id="@+id/edRowA"
+        android:layout_width="67dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="53dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toStartOf="@+id/edColumnA"
+        app:layout_constraintTop_toBottomOf="@+id/tvRow" />
+
+    <EditText
+        android:id="@+id/edColumnA"
+        android:layout_width="78dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="42dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvColumn" />
+
+    <EditText
+        android:id="@+id/edRowB"
+        android:layout_width="66dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="103dp"
+        android:layout_marginEnd="52dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toStartOf="@+id/edColumnB"
+        app:layout_constraintTop_toBottomOf="@+id/edRowA" />
+
+    <EditText
+        android:id="@+id/edColumnB"
+        android:layout_width="70dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="104dp"
+        android:layout_marginEnd="50dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edColumnA" />
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="153dp"
+        android:layout_height="57dp"
+        android:layout_marginBottom="181dp"
+        android:background="@drawable/circle"
+        android:text="Next"
+        android:textColor="#F6EEEE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

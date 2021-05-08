@@ -2,6 +2,7 @@ package group1.android.calculatorkit;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -10,6 +11,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import org.w3c.dom.Text;
+
+import static org.mariuszgromada.math.mxparser.parsertokens.ConstantValue.NaN;
 
 public class CircleAndLineIntersectionActivity extends AppCompatActivity {
     EditText etCLX;
@@ -27,6 +30,7 @@ public class CircleAndLineIntersectionActivity extends AppCompatActivity {
     TextView tvCLX;
     TextView tvCLY;
     boolean hasNotUsedSeekBar = true;
+    public String TAG = "CircleAndLineIntersectionActivity";
 
 
 
@@ -189,33 +193,44 @@ public class CircleAndLineIntersectionActivity extends AppCompatActivity {
         String x2String = null;
         String y1String = null;
         String y2String = null;
-        if(progress != null)
+
+        double x1Quadratic = quadraticCalculation(A, B, C, "positive");
+        double x2Quadratic = quadraticCalculation(A, B, C, "negative");
+        String x1StringTest = String.valueOf(x1Quadratic);
+        String x2StringTest = String.valueOf(x2Quadratic);
+
+
+        if(!x1StringTest.equals("NaN") && !x2StringTest.equals("NaN"))
         {
-            x1 = round(quadraticCalculation(A, B, C, "positive"), progress);
-            y1 = round(CLMNum * x1 + CLBNum, progress);
-            x2 = round(quadraticCalculation(A, B, C, "negative"), progress);
-            y2 = round(CLMNum * x2 + CLBNum, progress);
+
+            if (progress != null) {
+                x1 = round(quadraticCalculation(A, B, C, "positive"), progress);
+                y1 = round(CLMNum * x1 + CLBNum, progress);
+                x2 = round(quadraticCalculation(A, B, C, "negative"), progress);
+                y2 = round(CLMNum * x2 + CLBNum, progress);
+            } else {
+                x1 = Math.round(quadraticCalculation(A, B, C, "positive"));
+                y1 = Math.round(CLMNum * x1 + CLBNum);
+                x2 = Math.round(quadraticCalculation(A, B, C, "negative"));
+                y2 = Math.round(CLMNum * x2 + CLBNum);
+            }
+
+            x1String = String.valueOf(x1);
+            x2String = String.valueOf(y1);
+            y1String = String.valueOf(x2);
+            y2String = String.valueOf(y2);
+
+            tvCLX1.setText(x1String);
+            tvCLX2.setText(x2String);
+            tvCLY1.setText(y1String);
+            tvCLY2.setText(y2String);
+            tvCLX.setText("X");
+            tvCLY.setText("Y");
         }
         else
         {
-            x1 = Math.round(quadraticCalculation(A, B, C, "positive"));
-            y1 = Math.round(CLMNum * x1 + CLBNum);
-            x2 = Math.round(quadraticCalculation(A, B, C, "negative"));
-            y2 = Math.round(CLMNum * x2 + CLBNum);
-
+            Toast.makeText(getApplicationContext(), "No Intersection!", Toast.LENGTH_SHORT).show();
         }
-
-        x1String = String.valueOf(x1);
-        x2String = String.valueOf(y1);
-        y1String = String.valueOf(x2);
-        y2String = String.valueOf(y2);
-
-        tvCLX1.setText(x1String);
-        tvCLX2.setText(x2String);
-        tvCLY1.setText(y1String);
-        tvCLY2.setText(y2String);
-        tvCLX.setText("X");
-        tvCLY.setText("Y");
 
     }
 }

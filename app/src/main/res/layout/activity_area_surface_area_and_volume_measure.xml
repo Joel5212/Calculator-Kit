@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/id"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/calculatorbackground"
+    tools:context=".AreaSurfaceAreaAndVolumeMeasureActivity">
+
+    <EditText
+        android:id="@+id/etMeasure3"
+        android:layout_width="210dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etMeasure2" />
+
+    <EditText
+        android:id="@+id/etMeasure2"
+        android:layout_width="210dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textColor="#FBFBFB"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etMeasure1" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="344dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="8dp"
+        android:text="Enter Measurements..."
+        android:textColor="#EAE0E2"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvMeasure1"
+        android:layout_width="180dp"
+        android:layout_height="20dp"
+
+        android:layout_marginTop="20dp"
+        android:textColor="#E3DADA"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/etMeasure1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <TextView
+        android:id="@+id/tvMeasure2"
+        android:layout_width="180dp"
+        android:layout_height="20dp"
+
+        android:layout_marginTop="40dp"
+        android:textColor="#E3DADA"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/etMeasure2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMeasure1" />
+
+    <TextView
+        android:id="@+id/tvMeasure3"
+        android:layout_width="180dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="40dp"
+
+
+        android:textColor="#E3DADA"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/etMeasure3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMeasure2" />
+
+    <Button
+        android:id="@+id/btnCalculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="60dp"
+        android:background="@drawable/circle"
+        android:text="Calculate"
+        android:textColor="#FBFBFB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etMeasure3" />
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="390dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="8dp"
+
+        android:text="Result:"
+        android:textColor="#F6F3F3"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.809"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCalculate" />
+
+    <TextView
+        android:id="@+id/tvResultMeasure"
+        android:layout_width="295dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+
+
+        android:textColor="#F4F0F0"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.862"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCalculate"
+        app:layout_constraintVertical_bias="0.003" />
+
+    <EditText
+        android:id="@+id/etMeasure1"
+        android:layout_width="210dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textColor="#FAFAFA"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+</android.support.constraint.ConstraintLayout>

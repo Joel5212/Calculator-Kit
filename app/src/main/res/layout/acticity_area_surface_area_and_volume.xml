@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/calculatorbackground"
+
+    android:orientation="vertical"
+    tools:context=".AreaSurfaceAreaAndVolumeActivity">
+
+
+    <TextView
+        android:id="@+id/tvShape"
+        android:layout_width="337dp"
+        android:layout_height="30dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="38dp"
+        android:hint="Select Shape.."
+        android:textAllCaps="true"
+        android:textColor="#F4F4F4"
+        android:textColorHint="@color/white"
+        android:textSize="24sp" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_below="@+id/tvShape"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="25dp"
+        android:isScrollContainer="true"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="42dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnSquare"
+                android:layout_width="337dp"
+                android:layout_height="30dp"
+                android:background="#673AB7"
+                android:text="Square"
+                android:textColor="#FBF9F9"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="?android:attr/listDivider" />
+
+            <Button
+                android:id="@+id/btnRectangle"
+                android:layout_width="337dp"
+                android:layout_height="30dp"
+                android:background="#673AB7"
+                android:text="Rectangle"
+                android:textColor="#FAF9F9" />
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="?android:attr/listDivider" />
+
+            <Button
+                android:id="@+id/btnCircle"
+                android:layout_width="337dp"
+                android:layout_height="30dp"
+                android:background="#673AB7"
+                android:text="Circle"
+                android:textColor="#F8F5F5" />
+
+            <View
+                android:id="@+id/divider3"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="?android:attr/listDivider" />
+
+            <Button
+                android:id="@+id/btnEllipse"
+                android:layout_width="337dp"
+                android:layout_height="30dp"
+                android:background="#673AB7"
+                android:text="Ellipse"
+                android:textColor="#FDFCFC" />
+
+            <View
+                android:id="@+id/divider19"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="?android:attr/listDivider" />
+
+            <Button
+                android:id="@+id/btnTriangle"
+                android:layout_width="337dp"
+                android:layout_height="30dp"
+                android:background="#673AB7"
+                android:text="Triangle"
+                android:textColor="#FFFFFF" />
+
+            <View
+                android:id="@+id/divider4"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="?android:attr/listDivider" />
+
+            <Button
+                android:id="@+id/btnParallelogram"
+                android:layout_width="337dp"
+                android:layout_height="30dp"
+                android:background="#673AB7"
+                android:text="Parallelogram"
+                android:textColor="#FDFBFB" />
+
+            <View
+                android:id="@+id/divider5"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="?android:attr/listDivider" />
+
+            <Button
+                android:id="@+id/btnTrapezoid"
+                android:layout_width="337dp"
+                android:layout_height="30dp"
+                android:background="#673AB7"
+                android:text="Trapezoid"
+                android:textColor="#FDFCFC"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/divider6"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="?android:attr/listDivider" />
+
+            <Button
+                android:id="@+id/btnRhombus"
+                android:layout_width="337dp"
+                android:layout_height="30dp"
+                android:background="#673AB7"
+                android:text="Rhombus"
+                android:textColor="#FDFCFC"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/divider13"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="?android:attr/listDivider" />
+
+            <Button
+                android:id="@+id/btnPentagon"
+                android:layout_width="337dp"
+                android:layout_height="30dp"
+                android:background="#673AB7"
+                android:text="Pentagon"
+                android:textColor="#F8F6F6" />
+
+            <View
+                android:id="@+id/divider18"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="?android:attr/listDivider" />
+
+            <Button
+                android:id="@+id/btnHexagon"
+                android:layout_width="337dp"
+                android:layout_height="30dp"
+                android:background="#673AB7"
+                android:text="Hexagon"
+                android:textColor="#FBFAFA" />
+
+            <View
+                android:id="@+id/divider16"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="?android:attr/listDivider" />
+
+            <Button
+                android:id="@+id/btnHeptagon"
+                android:layout_width="337dp"
+                android:layout_height="30dp"
+                android:background="#673AB7"
+                android:text="Heptagon"
+                android:textColor="#FBFBFB" />
+
+            <View
+                android:id="@+id/divider17"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="?android:attr/listDivider" />
+
+            <Button
+                android:id="@+id/btnOctagon"
+                android:layout_width="337dp"
+                android:layout_height="30dp"
+                android:background="#673AB7"
+                android:text="Octagon"
+                android:textColor="#FBFAFA" />
+
+            <View
+                android:id="@+id/divider14"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="?android:attr/listDivider" />
+
+            <Button
+                android:id="@+id/btnNonagon"
+                android:layout_width="337dp"
+                android:layout_height="30dp"
+                android:background="#673AB7"
+                android:text="Nonagon"
+                android:textColor="#FFFEFE"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/divider20"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="?android:attr/listDivider" />
+
+            <Button
+                android:id="@+id/btnCube"
+                android:layout_width="337dp"
+                android:layout_height="30dp"
+                android:background="#673AB7"
+                android:text="Cube"
+                android:textColor="#FDFCFC" />
+
+            <View
+                android:id="@+id/divider21"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="?android:attr/listDivider" />
+
+            <Button
+                android:id="@+id/btnRectangularPrism"
+                android:layout_width="337dp"
+                android:layout_height="30dp"
+                android:background="#673AB7"
+                android:text="Rectangular Prism"
+                android:textColor="#FAF8F8" />
+
+            <View
+                android:id="@+id/divider8"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="?android:attr/listDivider" />
+
+            <Button
+                android:id="@+id/btnTriangularPrism"
+                android:layout_width="337dp"
+                android:layout_height="30dp"
+                android:background="#673AB7"
+                android:text="Triangular Prism"
+                android:textColor="#FAF8F8" />
+
+            <View
+                android:layout_width="337dp"
+                android:layout_height="10dp"
+                android:background="?android:attr/listDivider" />
+
+            <Button
+                android:id="@+id/btnSquarePrism"
+                android:layout_width="337dp"
+                android:layout_height="30dp"
+                android:background="#673AB7"
+                android:text="Square Prism"
+                android:textColor="#FAF9F9" />
+
+            <View
+                android:id="@+id/divider24"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="?android:attr/listDivider" />
+
+            <Button
+                android:id="@+id/btnSphere"
+                android:layout_width="337dp"
+                android:layout_height="30dp"
+                android:background="#673AB7"
+                android:text="Sphere"
+                android:textColor="#FDFCFC" />
+
+            <View
+                android:id="@+id/divider7"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="?android:attr/listDivider" />
+
+            <Button
+                android:id="@+id/btnCone"
+                android:layout_width="337dp"
+                android:layout_height="30dp"
+                android:background="#673AB7"
+                android:text="Cone"
+                android:textColor="#FBFAFA" />
+
+            <View
+                android:id="@+id/divider9"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="?android:attr/listDivider" />
+
+            <Button
+                android:id="@+id/btnCylinder"
+                android:layout_width="337dp"
+                android:layout_height="30dp"
+                android:background="#673AB7"
+                android:text="Cylinder"
+                android:textColor="#FBFAFA" />
+
+            <View
+                android:id="@+id/divider10"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="?android:attr/listDivider" />
+
+            <Button
+                android:id="@+id/btnSquarePyramid"
+                android:layout_width="337dp"
+                android:layout_height="30dp"
+                android:background="#673AB7"
+                android:text="Square Pyramid"
+                android:textColor="#FBFAFA" />
+
+            <View
+                android:id="@+id/divider22"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="?android:attr/listDivider" />
+
+            <Button
+                android:id="@+id/btnTrainglePyramid"
+                android:layout_width="337dp"
+                android:layout_height="30dp"
+                android:background="#673AB7"
+                android:text="Triangle Pyramid"
+                android:textColor="#FDFCFC" />
+
+            <View
+                android:id="@+id/divider25"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="?android:attr/listDivider" />
+
+            <Button
+                android:id="@+id/btnRectangularPyramid"
+                android:layout_width="337dp"
+                android:layout_height="30dp"
+                android:background="#673AB7"
+                android:text="Rectangular Pyramid"
+                android:textColor="#FDFCFC" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvASAV"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="94dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnArea"
+            android:layout_width="337dp"
+            android:layout_height="30dp"
+            android:background="#673AB7"
+            android:text="Area"
+            android:textColor="#F8F5F5" />
+
+        <View
+            android:id="@+id/divider11"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="?android:attr/listDivider" />
+
+        <Button
+            android:id="@+id/btnVolume"
+            android:layout_width="337dp"
+            android:layout_height="30dp"
+            android:background="#673AB7"
+            android:text="Volume"
+            android:textColor="#F8F6F6" />
+
+        <View
+            android:id="@+id/divider12"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="?android:attr/listDivider" />
+
+        <Button
+            android:id="@+id/btnSA"
+            android:layout_width="337dp"
+            android:layout_height="30dp"
+            android:background="#673AB7"
+            android:text="Surface Area"
+            android:textColor="#FAF6F6" />
+
+        <View
+            android:id="@+id/divider15"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="?android:attr/listDivider" />
+
+        <Button
+            android:id="@+id/btnCircumference"
+            android:layout_width="337dp"
+            android:layout_height="30dp"
+            android:background="#673AB7"
+            android:text="Circumference"
+            android:textColor="#FAF7F7" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvASAV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="262dp"
+        android:layout_marginEnd="37dp"
+        android:hint="Select Measurement..."
+        android:textAllCaps="true"
+        android:textColor="#FDFBFB"
+        android:textColorHint="@color/white"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="153dp"
+        android:layout_marginBottom="26dp"
+        android:background="@drawable/circle"
+        android:text="Next"
+        android:textColor="#FFFFFF" />
+
+</RelativeLayout>

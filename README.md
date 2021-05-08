@@ -8,6 +8,7 @@
 ## Overview
 ### Description
 A calculator app that is featuring different calculators on Android phone.
+Eliel Testing
 
 ### App Evaluation
 - **Category:** Utilities / Tool
@@ -33,7 +34,7 @@ A calculator app that is featuring different calculators on Android phone.
    - [x] User can navigate to four other calculators: Area, Surface Area, and Volume; Intersections; Distance; Angles
    - [ ] Allows user to choose calculation and shape to perform geometry calculation
       - [ ] Area, Surface Area, and Volume
-      - [ ] Intersections
+      - [X] Intersections
       - [ ] Distance
       - [x] Angles
 - [ ] Matrix Calculator
@@ -96,3 +97,5 @@ Application does not use network connections
 
 
 <img src="IntersectionsCirclesAndLines.gif" width=500><br>
+
+<img src="IntersectionOfCircleAndLineCalculator.gif" width=500><br>

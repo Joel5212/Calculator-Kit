@@ -1,17 +1,317 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/calculatorbackground" >
+
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Conversion Calculator"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/tvMiles"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"
+        android:hint="miles"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvKm" />
+
+    <TextView
+        android:id="@+id/tvKm"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"
+        android:hint="kilometers"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvFahrenheit" />
+
+    <TextView
+        android:id="@+id/tvCelsius"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"
+        android:hint="Celsius"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvInch" />
+
+    <TextView
+        android:id="@+id/tvInch"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"
+        android:hint="inches"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCm" />
+
+    <Button
+        android:id="@+id/kmEqualsMiles"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:layout_weight="1"
+        android:background="@drawable/circle"
+        android:backgroundTint="@color/black"
+        android:text="="
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/tvMiles"
+        app:layout_constraintStart_toEndOf="@+id/etKm"
+        app:layout_constraintTop_toTopOf="@+id/etKm" />
+
+    <Button
+        android:id="@+id/milesEqualsKm"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:layout_weight="1"
+        android:background="@drawable/circle"
+        android:backgroundTint="@color/black"
+        android:text="="
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/tvKm"
+        app:layout_constraintStart_toEndOf="@+id/etMiles"
+        app:layout_constraintTop_toTopOf="@+id/etMiles" />
+
+    <Button
+        android:id="@+id/celsiusEqualsFahrenheit"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:layout_weight="1"
+        android:background="@drawable/circle"
+        android:backgroundTint="@color/black"
+        android:text="="
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/tvFahrenheit"
+        app:layout_constraintStart_toEndOf="@+id/etCelsius"
+        app:layout_constraintTop_toTopOf="@+id/etCelsius" />
+
+    <Button
+        android:id="@+id/fahrenheitEqualsCelsius"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:layout_weight="1"
+        android:background="@drawable/circle"
+        android:backgroundTint="@color/black"
+        android:text="="
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/tvCelsius"
+        app:layout_constraintStart_toEndOf="@+id/etFahrenheit"
+        app:layout_constraintTop_toTopOf="@+id/etFahrenheit" />
+
+    <Button
+        android:id="@+id/cmEqualsInch"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:layout_weight="1"
+        android:background="@drawable/circle"
+        android:backgroundTint="@color/black"
+        android:text="="
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/tvInch"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toEndOf="@+id/etCm"
+        app:layout_constraintTop_toTopOf="@+id/tvInch"
+        app:layout_goneMarginTop="20dp"
+        tools:layout_marginTop="20dp" />
+
+    <Button
+        android:id="@+id/inchEqualsCm"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:layout_weight="1"
+        android:background="@drawable/circle"
+        android:backgroundTint="@color/black"
+        android:text="="
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/tvCm"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toEndOf="@+id/etInch"
+        app:layout_constraintTop_toTopOf="@+id/etInch" />
+
+    <EditText
+        android:id="@+id/etKm"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="kilometers"
+        android:inputType="numberDecimal"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/etMiles" />
+
+    <EditText
+        android:id="@+id/etInch"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="76dp"
+        android:ems="10"
+        android:hint="inches"
+        android:inputType="numberDecimal"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvFrom"
+        tools:textColor="#FFFFFF" />
+
+    <EditText
+        android:id="@+id/etMiles"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="miles"
+        android:inputType="numberDecimal"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etCelsius" />
+
+    <TextView
+        android:id="@+id/tvFahrenheit"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"
+        android:hint="Fahrenheit"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCelsius" />
+
+    <EditText
+        android:id="@+id/etCm"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="centimeters"
+        android:inputType="numberDecimal"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etInch" />
+
+    <TextView
+            android:id="@+id/tvConversionCalculator"
+            android:layout_width="150dp"
+            android:layout_height="70dp"
+            android:background="@drawable/circle"
+            android:text="Conversion Calculator"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvFrom"
+            android:layout_width="75dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/circle"
+            android:text="From:"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvConversionCalculator" />
+
+    <TextView
+        android:id="@+id/tvTo"
+        android:layout_width="75dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/circle"
+        android:text="To:"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvConversionCalculator" />
+
+    <EditText
+        android:id="@+id/etCelsius"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Celsius"
+        android:inputType="numberDecimal"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etFahrenheit" />
+
+    <EditText
+        android:id="@+id/etFahrenheit"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Fahrenheit"
+        android:inputType="numberDecimal"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etCm"
+        tools:layout_marginTop="20dp" />
+
+    <TextView
+        android:id="@+id/tvCm"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="40dp"
+        android:hint="centimeters"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTo" />
+
+
 
 </android.support.constraint.ConstraintLayout>

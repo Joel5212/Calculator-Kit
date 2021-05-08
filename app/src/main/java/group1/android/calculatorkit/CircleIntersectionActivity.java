@@ -51,63 +51,63 @@ public class CircleIntersectionActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String etX1String = etX1.getText().toString();
-                String etY1String = etY1.getText().toString();
-                String r0String = etRadius1.getText().toString();
-                String etX2String = etX2.getText().toString();
-                String etY2String = etY2.getText().toString();
-                String r1String = etRadius2.getText().toString();
-                if(!etX1String.isEmpty() && !etY1String.isEmpty() && !etX2String.isEmpty() && !etY2String.isEmpty() && !r0String.isEmpty() && !r1String.isEmpty()) {
-                    //(x-a)^2 + (y-b)^2 = r0^2      (x-c)^2 + (y-d)^ = r1^2
-                    Double a = Double.valueOf(etX1.getText().toString());
-                    Double b = Double.valueOf(etY1.getText().toString());
-                    Double r1 = Double.valueOf(etRadius1.getText().toString());
-                    Double c = Double.valueOf(etX2.getText().toString());
-                    Double d = Double.valueOf(etY2.getText().toString());
-                    Double r2 = Double.valueOf(etRadius2.getText().toString());
+                try {
 
-                    Double x1 = intersection(a, b, c, d, r1, r2, true, true);
-                    Double y1 = intersection(a, b, c, d, r1, r2, false, false);
-                    Double x2 = intersection(a, b, c, d, r1, r2, true, false);
-                    Double y2 = intersection(a, b, c, d, r1, r2, false, true);
+                    String etX1String = etX1.getText().toString();
+                    String etY1String = etY1.getText().toString();
+                    String r0String = etRadius1.getText().toString();
+                    String etX2String = etX2.getText().toString();
+                    String etY2String = etY2.getText().toString();
+                    String r1String = etRadius2.getText().toString();
+                    if (!etX1String.isEmpty() && !etY1String.isEmpty() && !etX2String.isEmpty() && !etY2String.isEmpty() && !r0String.isEmpty() && !r1String.isEmpty()) {
+                        //(x-a)^2 + (y-b)^2 = r0^2      (x-c)^2 + (y-d)^ = r1^2
 
-                    String StringX1Intersection = String.format("%.2f", x1);
-                    String StringY1Intersection = String.format("%.2f", y1);
-                    String StringX2Intersection = String.format("%.2f", x2);
-                    String StringY2Intersection = String.format("%.2f", y2);
-                    if(StringX1Intersection.equals("NaN") && StringY1Intersection.equals("NaN") && StringX2Intersection.equals("NaN") && StringY2Intersection.equals("NaN"))
-                    {
-                        Toast.makeText(CircleIntersectionActivity.this, "Circles do not intersect!", Toast.LENGTH_SHORT).show();
-                    }
-                    else if(StringX1Intersection.equals(StringX2Intersection) && StringY1Intersection.equals(StringY2Intersection))
-                    {
-                        tvXCircle.setText(StringX1Intersection);
-                        tvYCircle.setText(StringY1Intersection);
-                        tvComma1.setText(",");
-                    }
-                    else
-                    {
-                        tvXCircle.setText(StringX1Intersection);
-                        tvYCircle.setText(StringY1Intersection);
-                        tvX2Circle.setText(StringX2Intersection);
-                        tvY2Circle.setText(StringY2Intersection);
-                        tvComma1.setText(",");
-                        tvComma2.setText(",");
+                        Double a = Double.valueOf(etX1.getText().toString());
+                        Double b = Double.valueOf(etY1.getText().toString());
+                        Double r1 = Double.valueOf(etRadius1.getText().toString());
+                        Double c = Double.valueOf(etX2.getText().toString());
+                        Double d = Double.valueOf(etY2.getText().toString());
+                        Double r2 = Double.valueOf(etRadius2.getText().toString());
+
+                        Double x1 = intersection(a, b, c, d, r1, r2, true, true);
+                        Double y1 = intersection(a, b, c, d, r1, r2, false, false);
+                        Double x2 = intersection(a, b, c, d, r1, r2, true, false);
+                        Double y2 = intersection(a, b, c, d, r1, r2, false, true);
+
+                        String StringX1Intersection = String.format("%.2f", x1);
+                        String StringY1Intersection = String.format("%.2f", y1);
+                        String StringX2Intersection = String.format("%.2f", x2);
+                        String StringY2Intersection = String.format("%.2f", y2);
+                        if (StringX1Intersection.equals("NaN") && StringY1Intersection.equals("NaN") && StringX2Intersection.equals("NaN") && StringY2Intersection.equals("NaN")) {
+                            Toast.makeText(CircleIntersectionActivity.this, "Circles do not intersect!", Toast.LENGTH_SHORT).show();
+                        } else if (StringX1Intersection.equals(StringX2Intersection) && StringY1Intersection.equals(StringY2Intersection)) {
+                            tvXCircle.setText(StringX1Intersection);
+                            tvYCircle.setText(StringY1Intersection);
+                            tvComma1.setText(",");
+                        } else {
+                            tvXCircle.setText(StringX1Intersection);
+                            tvYCircle.setText(StringY1Intersection);
+                            tvX2Circle.setText(StringX2Intersection);
+                            tvY2Circle.setText(StringY2Intersection);
+                            tvComma1.setText(",");
+                            tvComma2.setText(",");
+                        }
+
+
+                    } else {
+                        Toast.makeText(CircleIntersectionActivity.this, "Fill in all Fields!", Toast.LENGTH_SHORT).show();
                     }
                 }
-                else
+                catch (Exception e)
                 {
-                    Toast.makeText(CircleIntersectionActivity.this, "Fill in all fields!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(CircleIntersectionActivity.this, "SYNTAX Error", Toast.LENGTH_SHORT).show();
                 }
-
-
-
-
-
             }
+
 
         });
     }
+
         public double intersection(double a, double b, double c, double d, double r0, double r1, boolean forX, boolean addition) {
             Double intersection = null;
             //Distance between two circles centers

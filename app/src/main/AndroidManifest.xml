@@ -25,17 +25,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".SimpleCalculatorActivity"
+        <activity android:name=".SimpleCalculatorActivity"
             android:screenOrientation="portrait" />
         <activity android:name=".GeometryCalculatorActivity" />
-        <activity android:name=".MatrixCalculatorActivity" />
-        <activity android:name=".ConversionCalculatorActivity" />
+        <activity android:name=".MatrixCalculatorActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ConversionCalculatorActivity"
+            android:screenOrientation="portrait"/>
         <activity android:name=".AreaSurfaceAreaAndVolumeActivity"
             android:screenOrientation="portrait"/>
         <activity android:name=".LineIntersectionActivity"
             android:screenOrientation="portrait"/>
-        <activity android:name=".DistanceActivity" />
+        <activity android:name=".DistanceActivity"
+            android:screenOrientation="portrait"/>
         <activity android:name=".AnglesActivity" />
         <activity android:name=".AnglesTriangleActivity" />
         <activity android:name=".AnglesQuadrilateralActivity" />

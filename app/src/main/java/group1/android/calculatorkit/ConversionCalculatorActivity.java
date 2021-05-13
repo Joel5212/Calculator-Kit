@@ -148,7 +148,7 @@ public class ConversionCalculatorActivity extends AppCompatActivity {
 
         double inputCelsius = Double.parseDouble(celsiusValueEntered);
 
-        double displayFahrenheit = (inputCelsius + 1.8) + 32 ;
+        double displayFahrenheit = (inputCelsius * (9.0/5.0)) + 32 ;
         DecimalFormat numberFormat = new DecimalFormat("#.00");
         tvFahrenheit.setText("" + numberFormat.format(displayFahrenheit) + " °F");
 
@@ -162,7 +162,7 @@ public class ConversionCalculatorActivity extends AppCompatActivity {
 
         double inputFahrenheit = Double.parseDouble(fahrenheitValueEntered);
 
-        double displayCelsius = (inputFahrenheit - 32) * 0.5556;
+        double displayCelsius = (inputFahrenheit - 32) * (5.0/9.0);
         DecimalFormat numberFormat = new DecimalFormat("#.00");
 
 

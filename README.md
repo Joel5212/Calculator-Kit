@@ -8,7 +8,6 @@
 ## Overview
 ### Description
 A calculator app that is featuring different calculators on Android phone.
-Eliel Testing
 
 ### App Evaluation
 - **Category:** Utilities / Tool

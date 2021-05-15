@@ -72,13 +72,16 @@ public class CircleAndLineIntersectionActivity extends AppCompatActivity {
 
                                 if (progress == 0) {
                                     findIntersection(CLXNum, CLMNum, CLYNum, CLBNum, CLRadiusNum, null);
+                                    hasNotUsedSeekBar = false;
                                 } else {
                                     findIntersection(CLXNum, CLMNum, CLYNum, CLBNum, CLRadiusNum, progress);
+                                    hasNotUsedSeekBar = false;
                                 }
+
                             }
                             catch (Exception e)
                             {
-                                Toast.makeText(getApplicationContext(), "Error: Check Inputs!", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getApplicationContext(), "Error: Fill in all Fields!", Toast.LENGTH_SHORT).show();
                             }
 
                         }
@@ -100,7 +103,6 @@ public class CircleAndLineIntersectionActivity extends AppCompatActivity {
                 }
             });
 
-            if (hasNotUsedSeekBar == true) {
                 btnCL.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -114,13 +116,10 @@ public class CircleAndLineIntersectionActivity extends AppCompatActivity {
                         }
                         catch(Exception e)
                         {
-                            Toast.makeText(getApplicationContext(), "Error: Check Inputs!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "Error: Fill in all fields!", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
-            }
-
-
     }
 
 

@@ -123,8 +123,8 @@ public class AreaSurfaceAreaAndVolumeActivity extends AppCompatActivity {
         btnVolume.setOnClickListener(listener2);
         btnSA.setOnClickListener(listener2);
         btnCircumference.setOnClickListener(listener2);
-        String oneDimensionalShapes = "Square, Rectangle, Circle, Triangle, Parallelogram, Trapezoid, Ellipse, Rhombus, Pentagon, Hexagon, Heptagon, Octagon, Nonagon, Cube";
-        String threeDimensionalShapes = "Rectangular Prism, Sphere, Cone, Cylinder, SqrPyramid, Triangular Pyramid, Rectangular Pyramid, Triangular Prism, SqrPrism";
+        String twoDimensionalShapes = "Square, Rectangle, Circle, Triangle, Parallelogram, Trapezoid, Ellipse, Rhombus, Pentagon, Hexagon, Heptagon, Octagon, Nonagon";
+        String threeDimensionalShapes = "Rectangular Prism, Sphere, Cone, Cylinder, SqrPyramid, Triangular Pyramid, Rectangular Pyramid, SqrPrism, Cube";
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -138,7 +138,7 @@ public class AreaSurfaceAreaAndVolumeActivity extends AppCompatActivity {
                 {
                     tvShapeString = "SqrPrism";
                 }
-                if(oneDimensionalShapes.contains(tvShapeString) && (tvASAVString.equals("Surface Area") || tvASAVString.equals("Volume")) && (tvShapeString != null && tvASAVString != null))
+                if(twoDimensionalShapes.contains(tvShapeString) && (tvASAVString.equals("Surface Area") || tvASAVString.equals("Volume")) && (tvShapeString != null && tvASAVString != null))
                 {
                     Toast.makeText(AreaSurfaceAreaAndVolumeActivity.this, "Surface Area or Volume cannot be found for this two-dimensional shape!", Toast.LENGTH_SHORT).show();
                 }

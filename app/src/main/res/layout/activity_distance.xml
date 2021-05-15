@@ -1,17 +1,171 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/calculatorbackground">
 
     <TextView
+        android:id="@+id/tvDDecimals"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Distance"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="36dp"
+        android:textColor="#F8F6F6"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/textView10"
+        app:layout_constraintTop_toBottomOf="@+id/etDistanceY2" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="36dp"
+        android:hint="Digits after the decimal point:"
+        android:textColor="#FAF8F8"
+        android:textColorHint="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etDistanceX2" />
+
+    <SeekBar
+        android:id="@+id/sbD"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="245dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="8dp"
+        android:max="15"
+        android:progress="0"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="56dp"
+        android:text="Point #1"
+        android:textColor="#F8F3F3"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="24dp"
+        android:text="Point #2"
+        android:textColor="#F8F3F3"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etDistanceX" />
+
+    <EditText
+        android:id="@+id/etDistanceX"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="116dp"
+        android:ems="10"
+        android:hint="X"
+        android:inputType="textPersonName"
+        android:textColor="#FAF6F6"
+        android:textColorHint="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:backgroundTint="@color/white"/>
+
+    <EditText
+        android:id="@+id/etDistanceY"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="117dp"
+        android:ems="10"
+        android:hint="Y"
+        android:inputType="textPersonName"
+        android:textColor="#FAF5F5"
+        android:textColorHint="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/etDistanceX"
+        app:layout_constraintTop_toTopOf="parent"
+        android:backgroundTint="@color/white"/>
+
+    <EditText
+        android:id="@+id/etDistanceX2"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="X"
+        android:inputType="textPersonName"
+        android:textColor="#FDFCFC"
+        android:textColorHint="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13"
+        android:backgroundTint="@color/white"/>
+
+    <EditText
+        android:id="@+id/etDistanceY2"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Y"
+        android:inputType="textPersonName"
+        android:textColor="#FDFCFC"
+        android:textColorHint="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/etDistanceX2"
+        app:layout_constraintTop_toBottomOf="@+id/textView13"
+        android:backgroundTint="@color/white"/>
+
+    <Button
+        android:id="@+id/btnCalculateDistance"
+        android:layout_width="125dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="72dp"
+        android:background="@drawable/circle"
+        android:text="Calculate"
+        android:textColor="#FDFCFC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="108dp"
+        android:text="Distance:"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etDistanceX2" />
+
+    <TextView
+        android:id="@+id/tvDistance"
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="108dp"
+        android:textColor="#F8F4F4"
+        android:textSize="24sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintStart_toEndOf="@+id/textView14"
+        app:layout_constraintTop_toBottomOf="@+id/etDistanceY2" />
 
 </android.support.constraint.ConstraintLayout>

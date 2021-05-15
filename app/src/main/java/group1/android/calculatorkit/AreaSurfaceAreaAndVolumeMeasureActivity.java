@@ -138,24 +138,19 @@ public class AreaSurfaceAreaAndVolumeMeasureActivity extends AppCompatActivity {
                     break;
 
             case "Rhombus":
-            {
                     tvMeasure1.setText("Enter Diagonal#1");
                     tvMeasure2.setText("Enter Diagonal#2");
                     etMeasure3.setKeyListener(null);
                     etMeasure3.setBackgroundResource(android.R.color.transparent);
                     break;
-            }
 
             case "Pentagon":
-            {
                     tvMeasure1.setText("Side:");
                     etMeasure2.setKeyListener(null);
                     etMeasure3.setKeyListener(null);
                     etMeasure2.setBackgroundResource(android.R.color.transparent);
                     etMeasure3.setBackgroundResource(android.R.color.transparent);
                     break;
-
-            }
             case "Hexagon":
                     tvMeasure1.setText("Side:");
                     etMeasure2.setKeyListener(null);

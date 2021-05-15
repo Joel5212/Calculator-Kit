@@ -261,14 +261,6 @@
                 android:layout_height="10dp"
                 android:background="?android:attr/listDivider" />
 
-            <Button
-                android:id="@+id/btnTriangularPrism"
-                android:layout_width="337dp"
-                android:layout_height="30dp"
-                android:background="#673AB7"
-                android:text="Triangular Prism"
-                android:textColor="#FAF8F8" />
-
             <View
                 android:layout_width="337dp"
                 android:layout_height="10dp"

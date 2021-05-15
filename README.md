@@ -8,7 +8,6 @@
 ## Overview
 ### Description
 A calculator app that is featuring different calculators on Android phone.
-Eliel Testing
 
 ### App Evaluation
 - **Category:** Utilities / Tool
@@ -28,12 +27,12 @@ Eliel Testing
    - [x] Geometry calculator
    - [x] Matrix calculator
    - [x] Conversion calculator
-- [ ] Simple Calculator
-   - [ ] Performs addition, subtraction, multiplication, and division
+- [X] Simple Calculator
+   - [X] Performs addition, subtraction, multiplication, and division
 - [ ] Geometry Calculator
    - [x] User can navigate to four other calculators: Area, Surface Area, and Volume; Intersections; Distance; Angles
-   - [ ] Allows user to choose calculation and shape to perform geometry calculation
-      - [ ] Area, Surface Area, and Volume
+   - [X] Allows user to choose calculation and shape to perform geometry calculation
+      - [X] Area, Surface Area, and Volume
       - [X] Intersections
       - [ ] Distance
       - [x] Angles

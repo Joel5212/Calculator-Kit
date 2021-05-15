@@ -17,26 +17,14 @@ import java.text.DecimalFormat;
 
 public class ConversionCalculatorActivity extends AppCompatActivity {
 
-    private EditText etInch;
-    private EditText etCm;
-    private EditText etFahrenheit;
-    private EditText etCelsius;
-    private EditText etMiles;
-    private EditText etKm;
+    private EditText etInch, etCm, etFahrenheit,
+            etCelsius, etMiles, etKm;
 
-    private Button inchEqualsCm;
-    private Button cmEqualsInch;
-    private Button fahrenheitEqualsCelsius;
-    private Button celsiusEqualsFahrenheit;
-    private Button milesEqualsKm;
-    private Button kmEqualsMiles;
+    private Button inchEqualsCm, cmEqualsInch, fahrenheitEqualsCelsius,
+            celsiusEqualsFahrenheit, milesEqualsKm, kmEqualsMiles;
 
-    private TextView tvCm;
-    private TextView tvInch;
-    private TextView tvCelsius;
-    private TextView tvFahrenheit;
-    private TextView tvKm;
-    private TextView tvMiles;
+    private TextView tvCm, tvInch, tvCelsius,
+            tvFahrenheit, tvKm, tvMiles;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -63,150 +51,121 @@ public class ConversionCalculatorActivity extends AppCompatActivity {
         tvKm = findViewById(R.id.tvKm);
         tvMiles = findViewById(R.id.tvMiles);
 
-        inchEqualsCm.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //convert from inch to cm
-                
-                convertFromInchToCm();
-            }
-        });
+        inchEqualsCm.setOnClickListener(v -> convertFromInchToCm());
 
-        cmEqualsInch.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                convertFromCmToInch();
-            }
-        });
+        cmEqualsInch.setOnClickListener(v -> convertFromCmToInch());
 
-        fahrenheitEqualsCelsius.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                convertFromFahrenheitToCelsius();
-            }
-        });
+        fahrenheitEqualsCelsius.setOnClickListener(v -> convertFromFahrenheitToCelsius());
 
-        celsiusEqualsFahrenheit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                convertFromCelsiusToFahrenheit();
-            }
-        });
+        celsiusEqualsFahrenheit.setOnClickListener(v -> convertFromCelsiusToFahrenheit());
 
-        milesEqualsKm.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                convertFromMilesToKm();
-            }
-        });
+        milesEqualsKm.setOnClickListener(v -> convertFromMilesToKm());
 
-        kmEqualsMiles.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                convertFromKmToMiles();
-            }
-        });
-
-
-
-
-
-
+        kmEqualsMiles.setOnClickListener(v -> convertFromKmToMiles());
     }
 
     private void convertFromKmToMiles() {
+        try {
+            String kmValueEntered = etKm.getText().toString();
 
-        String kmValueEntered = etKm.getText().toString();
+            double inputKm = Double.parseDouble(kmValueEntered);
 
-        double inputKm = Double.parseDouble(kmValueEntered);
+            double displayMiles = inputKm/1.60934;
 
-        double displayMiles = inputKm/1.60934;
+            DecimalFormat numberFormat = new DecimalFormat("#.00");
 
-        DecimalFormat numberFormat = new DecimalFormat("#.00");
-
-        tvMiles.setText("" + numberFormat.format(displayMiles) + " miles");
-
+            tvMiles.setText("" + numberFormat.format(displayMiles) + " miles");
+        } catch (Exception e) {
+            e.printStackTrace();
+            tvMiles.setText("Please enter a value.");
+        }
     }
 
     private void convertFromMilesToKm() {
+        try {
+            String milesValueEntered = etMiles.getText().toString();
 
-        String milesValueEntered = etMiles.getText().toString();
+            double inputMiles = Double.parseDouble(milesValueEntered);
 
-        double inputMiles = Double.parseDouble(milesValueEntered);
+            double displayKm = inputMiles * 1.60934 ;
+            DecimalFormat numberFormat = new DecimalFormat("#.00");
 
-        double displayKm = inputMiles * 1.60934 ;
-        DecimalFormat numberFormat = new DecimalFormat("#.00");
-
-        tvKm.setText("" + numberFormat.format(displayKm) + " km");
-
-
+            tvKm.setText("" + numberFormat.format(displayKm) + " km");
+        } catch (Exception e) {
+            e.printStackTrace();
+            tvKm.setText("Please enter a value.");
+        }
     }
 
     private void convertFromCelsiusToFahrenheit() {
+        try {
+            String celsiusValueEntered = etCelsius.getText().toString();
 
-        String celsiusValueEntered = etCelsius.getText().toString();
+            double inputCelsius = Double.parseDouble(celsiusValueEntered);
 
-        double inputCelsius = Double.parseDouble(celsiusValueEntered);
-
-        double displayFahrenheit = (inputCelsius + 1.8) + 32 ;
-        DecimalFormat numberFormat = new DecimalFormat("#.00");
-        tvFahrenheit.setText("" + numberFormat.format(displayFahrenheit) + " °F");
-
-
-
+            double displayFahrenheit = (inputCelsius * (9.0/5.0)) + 32 ;
+            DecimalFormat numberFormat = new DecimalFormat("#.00");
+            tvFahrenheit.setText("" + numberFormat.format(displayFahrenheit) + " °F");
+        } catch (Exception e) {
+            e.printStackTrace();
+            tvFahrenheit.setText("Please enter a value.");
+        }
     }
 
     private void convertFromFahrenheitToCelsius() {
+        try {
+            String fahrenheitValueEntered = etFahrenheit.getText().toString();
+            double inputFahrenheit = Double.parseDouble(fahrenheitValueEntered);
 
-        String fahrenheitValueEntered = etFahrenheit.getText().toString();
-
-        double inputFahrenheit = Double.parseDouble(fahrenheitValueEntered);
-
-        double displayCelsius = (inputFahrenheit - 32) * 0.5556;
-        DecimalFormat numberFormat = new DecimalFormat("#.00");
-
-
-        tvCelsius.setText("" + numberFormat.format(displayCelsius) + " °C");
+            double displayCelsius = (inputFahrenheit - 32) * (5.0/9.0);
+            DecimalFormat numberFormat = new DecimalFormat("#.00");
 
 
-
+            tvCelsius.setText("" + numberFormat.format(displayCelsius) + " °C");
+        } catch (Exception e) {
+            e.printStackTrace();
+            tvCelsius.setText("Please enter a value.");
+        }
     }
 
     private void convertFromCmToInch() {
+        try {
+            String cmValueEntered = etCm.getText().toString();
 
-        String cmValueEntered = etCm.getText().toString();
+            double inputCm = Double.parseDouble(cmValueEntered);
 
-        double inputCm = Double.parseDouble(cmValueEntered);
+            double displayInch = inputCm / 2.54;
 
-        double displayInch = inputCm / 2.54;
+            DecimalFormat numberFormat = new DecimalFormat("#.00");
 
-        DecimalFormat numberFormat = new DecimalFormat("#.00");
-
-        tvInch.setText("" + numberFormat.format(displayInch) + " inches");
-
+            tvInch.setText("" + numberFormat.format(displayInch) + " inches");
+        } catch (Exception e) {
+            e.printStackTrace();
+            tvInch.setText("Please enter a value.");
+        }
     }
 
     private void convertFromInchToCm() {
         //converts from inches in edit tet  to Cm
         //display in centimeter textview
+        try {
+            String inchValueEntered = etInch.getText().toString();
 
-        String inchValueEntered = etInch.getText().toString();
+            //converting string to number
+            double inputInch = Double.parseDouble(inchValueEntered);
 
-        //converting string to number
-        double inputInch = Double.parseDouble(inchValueEntered);
+            // converting inch to cm
 
-        // converting inch to cm
+            double displayCm = inputInch * 2.54;
 
-        double displayCm = inputInch * 2.54;
+            //displaying value
 
-        //displaying value
+            DecimalFormat numberFormat = new DecimalFormat("#.00");
 
-        DecimalFormat numberFormat = new DecimalFormat("#.00");
-
-        tvCm.setText("" + numberFormat.format(displayCm) + " cm");
-
-
-
-
+            tvCm.setText("" + numberFormat.format(displayCm) + " cm");
+        } catch (Exception e) {
+            e.printStackTrace();
+            tvCm.setText("Please enter a value.");
+        }
     }
 }

@@ -34,12 +34,8 @@ A calculator app that is featuring different calculators on Android phone.
    - [X] Allows user to choose calculation and shape to perform geometry calculation
       - [X] Area, Surface Area, and Volume
       - [X] Intersections
-      - [ ] Distance
+      - [X] Distance
       - [x] Angles
-- [ ] Matrix Calculator
-   - [ ] Allows user to input matrix dimension to solve matrix problem
-- [ ] Conversion Calculator
-   - [ ] Allows user to choose from unit to unit to want to convert and calculate the answer.
 
 
 **Optional Nice-to-have Stories**

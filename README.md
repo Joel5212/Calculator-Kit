@@ -29,7 +29,7 @@ A calculator app that is featuring different calculators on Android phone.
    - [x] Conversion calculator
 - [X] Simple Calculator
    - [X] Performs addition, subtraction, multiplication, and division
-- [ ] Geometry Calculator
+- [X] Geometry Calculator
    - [x] User can navigate to four other calculators: Area, Surface Area, and Volume; Intersections; Distance; Angles
    - [X] Allows user to choose calculation and shape to perform geometry calculation
       - [X] Area, Surface Area, and Volume
